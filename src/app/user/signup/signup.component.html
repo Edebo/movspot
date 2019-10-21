@@ -1,7 +1,7 @@
 <h1>SignUp</h1>
 <hr>
 <div class="col-md-4">
-  <form [formGroup]='signupForm' autocomplete="off" (ngSubmit)='signup(signupForm.value)'>
+  <form [formGroup]='signupForm' autocomplete="off">
 
     <div class="form-group" [ngClass]="{'error':validateEmail() }">
       <label for="email">Email:</label>
