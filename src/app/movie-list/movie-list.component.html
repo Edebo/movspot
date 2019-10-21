@@ -1,0 +1,10 @@
+    <div class="row"   >
+        <div  class="col-md-4 my-3" *ngFor="let movie of movies | paginate: { itemsPerPage: 10, currentPage: p ,totalItems:numberOfPages}">
+          <app-movie-card [movie]="movie" (click)="handleMovieClicked(event.name)"></app-movie-card>
+        </div>
+
+    </div>
+    <div>
+      <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
+    </div>
+

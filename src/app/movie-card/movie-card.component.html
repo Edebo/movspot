@@ -1,0 +1,11 @@
+ <div class='poster-card' [routerLink]="['/movies',movie.imdbID]">
+  <div class="poster">
+    <div class="poster__img" [style.background-image]="'url(' + movie.Poster + ')'"></div>
+    <div class="poster__info">
+      <h1 class="poster__title">Title: {{movie.Title}}</h1>
+      <p class="poster__text">Year: {{movie.Year}}</p>
+
+    </div>
+
+  </div>
+

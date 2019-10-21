@@ -1,0 +1,43 @@
+
+<div class="movie-card">
+
+  <div class="cont">
+
+    <div class="hero" [style.background-image]="'url(' + movie.Poster + ')'" >
+
+      <div class="details">
+
+        <div class="title1">{{movie.Title}} <span>{{movie.Rated}}</span> <span>{{movie.Rated}}</span></div>
+        <div class="title2">Actors:{{movie.Actors}}</div>
+        <div class="title2">Director:{{movie.Director}}</div>
+        <div class="title2">Awards: {{movie.Awards}}</div>
+        <!-- <div class="title2">The Battle of the Five Armies</div> -->
+      </div> <!-- end details -->
+
+    </div> <!-- end hero -->
+
+    <div class="description">
+
+      <div class="column1">
+          <p>Genre</p>
+          <p><span class="tag">{{movie.Genre}}</span></p>
+          <p>Released</p>
+          <p><span class="tag">{{movie.Released}}</span></p>
+        <p>Runtime</p>
+        <p><span class="tag">{{movie.Runtime}}</span></p>
+        <div class="likes" (click)="addToFavorite()">add to favorite</div>
+      </div> <!-- end column1 -->
+
+      <div class="column2">
+        <p>{{movie.Plot}}</p>
+        <p>Language: {{movie.Language}}</p>
+        <p>Country: {{movie.Country}}</p>
+        <p>Writer: {{movie.Writer}}</p>
+
+
+      </div> <!-- end column2 -->
+    </div> <!-- end description -->
+
+
+  </div> <!-- end container -->
+</div> <!-- end movie-card -->
