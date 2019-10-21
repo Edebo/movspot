@@ -13,11 +13,11 @@ export class MoviesService {
   }
 
   getMovies(){
-    return this.http.get('http://www.omdbapi.com/?s=man&apikey=90187ac5')
+    return this.http.get('https://www.omdbapi.com/?s=man&apikey=90187ac5')
   }
 
   getMovie(imdbID){
-    return this.http.get(`http://www.omdbapi.com/?apikey=90187ac5&i=${imdbID}&plot=full`)
+    return this.http.get(`https://www.omdbapi.com/?apikey=90187ac5&i=${imdbID}&plot=full`)
   }
 
 
