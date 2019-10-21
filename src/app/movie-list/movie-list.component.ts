@@ -13,7 +13,7 @@ export class MovieListComponent implements OnInit {
   totalResults:Number
   response:string
   currentPage:Number
-
+  pages:Number
   constructor(private moviesService:MoviesService,private toastr:ToastrService) {
    }
 
@@ -23,7 +23,7 @@ export class MovieListComponent implements OnInit {
       this.movies = data.Search
       this.totalResults = Number(data.totalResults)
       this.response = data.Response
-      this.numberOfPages(Number(data.totalResults))
+      this.pages = this.numberOfPages(Number(data.totalResults))
     },error=>{
       console.log(error)
     }
@@ -34,7 +34,7 @@ export class MovieListComponent implements OnInit {
     const pages = total / 10
 
     console.log(pages)
-
+    return pages
   }
 
 
