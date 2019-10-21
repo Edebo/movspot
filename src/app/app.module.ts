@@ -9,7 +9,6 @@ import { MovieListComponent } from './movie-list/movie-list.component';
 import { MovieCardComponent } from './movie-card/movie-card.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MovieDetailComponent } from './movie-detail/movie-detail.component';
-// import { ErrorComponent } from './error/error.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FavoriteComponent } from './favorite/favorite.component';
 @NgModule({
@@ -20,7 +19,7 @@ import { FavoriteComponent } from './favorite/favorite.component';
     NavbarComponent,
     MovieDetailComponent,
     FavoriteComponent
-    // ErrorComponent
+
   ],
   imports: [
     BrowserModule,
