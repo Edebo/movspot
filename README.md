@@ -22,7 +22,8 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-##Run locally
+## Running locally
+
 Download the zip file and extract it
 Open the extracted folder in your choice text editor
 npm install or npm i
