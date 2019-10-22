@@ -9,6 +9,20 @@
   color:#f97924;
 }
 
+.user{
+  width:30px;
+  height:30px;
+  border-radius:50%;
+  text-transform: uppercase;
+  background:#f97924;
+  color:white;
+  font-weight: 500;
+  margin:5px;
+  text-align: center;
+  line-height: 30px;
+  vertical-align: middle;
+}
+
 @media(max-width:1200px){
   #searchForm{
     display: none;

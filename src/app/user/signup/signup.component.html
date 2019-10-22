@@ -1,31 +1,30 @@
 <h1>SignUp</h1>
 <hr>
-<div class="col-md-4">
-  <form [formGroup]='signupForm' autocomplete="off">
+<div class="alert alert-success" *ngIf="success">Signup successful</div>
+<div class="col-md-6 col-md-offset-3">
+  <form [formGroup]='signupForm' (ngSubmit)='SignUp()' autocomplete="off">
 
     <div class="form-group" [ngClass]="{'error':validateEmail() }">
       <label for="email">Email:</label>
-      <em *ngIf="validateEmail()">Email is Required</em>
-      <em *ngIf="signupForm.controls.email.errors.invalidEmail">Invalid email</em>
+      <div  class="alert alert-danger" *ngIf="!validateEmail()">Email is Required</div>
+
       <input formControlName='email' id="email" type="text" class="form-control" placeholder="Email..." />
     </div>
     <!-- password -->
     <div class="form-group" [ngClass]="{'error':!validatePassword()}" >
       <label for="password">Password:</label>
-      <em *ngIf="!validatePassword()">Password is Required</em>
+      <div class="alert alert-danger" *ngIf="!validatePassword()">Password is Required</div>
       <input formControlName='password' id="password" type="password" class="form-control"placeholder="Password..." />
     </div>
 
       <!-- confirm password -->
       <div class="form-group">
-          <div *ngIf="" class="alert alert-danger" role="alert">
-              <em *ngIf="isValid('confirmPassword') && signupForm.controls.confirmPassword.errors.required">Confirm Password is required</em>
-              <em *ngIf="isValid('confirmPassword') && mustMatch()">Passwords must match</em>
-          </div>
         <label>Confirm Password</label>
+        <div  class="alert alert-danger" *ngIf="isValid('confirmPassword') && signupForm.controls.confirmPassword.errors.required">Confirm Password is required</div>
+        <div class="alert alert-danger" *ngIf="mustMatch()">Passwords must match</div>
         <input type="password" formControlName="confirmPassword" class="form-control"  />
 
     </div>
 
-    <button type="submit" class="btn btn-primary">SignUp</button>
+    <button type="submit" class="btn btn-primary" [disabled]="!signupForm.valid">SignUp</button>
   </form>

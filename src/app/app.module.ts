@@ -11,6 +11,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FavoriteComponent } from './favorite/favorite.component';
+import { FooterComponent } from './footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +19,8 @@ import { FavoriteComponent } from './favorite/favorite.component';
     MovieCardComponent,
     NavbarComponent,
     MovieDetailComponent,
-    FavoriteComponent
+    FavoriteComponent,
+    FooterComponent
 
   ],
   imports: [

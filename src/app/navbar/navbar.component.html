@@ -18,18 +18,21 @@
       <div class="navbar-header navbar-right">
         <ul class="nav navbar-nav">
 
-          <li>
+          <li *ngIf="!isAuth()">
               <a [routerLink]="['/user','login']"
               routerLinkActive="active"
 
               >Login</a>
             </li>
-            <li>
+            <li *ngIf="!isAuth()">
                 <a [routerLink]="['/user','signup']"
                 routerLinkActive="active"
 
                 >Signup</a>
               </li>
+              <li><div class="user" *ngIf="isAuth()">{{user.email.charAt(0)}}</div></li>
+              <button *ngIf="isAuth()" class="btn btn-primary" (click)="logout()">Logout</button>
+
         </ul>
       </div>
       <form id="searchForm" class="navbar-form navbar-right">
