@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+
+.row{
+  margin:0;
+}
+.footer{
+  margin-top:1em;
+  font-size: 1em;
+  font-weight:400;
+text-align :center;
+padding-top:1em;
+padding-bottom:1em;
+background: #4e5d6c;
+}

@@ -1,30 +1,33 @@
-<h1>SignUp</h1>
-<hr>
-<div class="alert alert-success" *ngIf="success">Signup successful</div>
-<div class="col-md-6 col-md-offset-3">
-  <form [formGroup]='signupForm' (ngSubmit)='SignUp()' autocomplete="off">
 
-    <div class="form-group" [ngClass]="{'error':validateEmail() }">
-      <label for="email">Email:</label>
-      <div  class="alert alert-danger" *ngIf="!validateEmail()">Email is Required</div>
+<div class="my-2">
+    <h1>SignUp</h1>
+    <hr>
+    <div class="alert alert-success" *ngIf="success">Signup successful</div>
+    <div class="col-md-6 col-md-offset-3">
+      <form [formGroup]='signupForm' (ngSubmit)='SignUp()' autocomplete="off">
 
-      <input formControlName='email' id="email" type="text" class="form-control" placeholder="Email..." />
-    </div>
-    <!-- password -->
-    <div class="form-group" [ngClass]="{'error':!validatePassword()}" >
-      <label for="password">Password:</label>
-      <div class="alert alert-danger" *ngIf="!validatePassword()">Password is Required</div>
-      <input formControlName='password' id="password" type="password" class="form-control"placeholder="Password..." />
-    </div>
+        <div class="form-group" [ngClass]="{'error':validateEmail() }">
+          <label for="email">Email:</label>
+          <div  class="alert alert-danger" *ngIf="!validateEmail()">Email is Required</div>
 
-      <!-- confirm password -->
-      <div class="form-group">
-        <label>Confirm Password</label>
-        <div  class="alert alert-danger" *ngIf="isValid('confirmPassword') && signupForm.controls.confirmPassword.errors.required">Confirm Password is required</div>
-        <div class="alert alert-danger" *ngIf="mustMatch()">Passwords must match</div>
-        <input type="password" formControlName="confirmPassword" class="form-control"  />
+          <input formControlName='email' id="email" type="text" class="form-control" placeholder="Email..." />
+        </div>
+        <!-- password -->
+        <div class="form-group" [ngClass]="{'error':!validatePassword()}" >
+          <label for="password">Password:</label>
+          <div class="alert alert-danger" *ngIf="!validatePassword()">Password is Required</div>
+          <input formControlName='password' id="password" type="password" class="form-control"placeholder="Password..." />
+        </div>
 
-    </div>
+          <!-- confirm password -->
+          <div class="form-group">
+            <label>Confirm Password</label>
+            <div  class="alert alert-danger" *ngIf="isValid('confirmPassword') && signupForm.controls.confirmPassword.errors.required">Confirm Password is required</div>
+            <div class="alert alert-danger" *ngIf="mustMatch()">Passwords must match</div>
+            <input type="password" formControlName="confirmPassword" class="form-control"  />
 
-    <button type="submit" class="btn btn-primary" [disabled]="!signupForm.valid">SignUp</button>
-  </form>
+        </div>
+
+        <button type="submit" class="btn btn-primary" [disabled]="!signupForm.valid">SignUp</button>
+      </form>
+</div>
