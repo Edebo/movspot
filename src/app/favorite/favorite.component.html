@@ -2,7 +2,7 @@
   You do not have have any favorite movie
 </div>
 <div class="row" *ngIf="totalFav>0">
-  <div  class="col-md-12 my-3" *ngFor="let movie of favorites">
+  <div  class="col-md-6 my-3" *ngFor="let movie of favorites">
     <app-movie-card [movie]="movie" (click)="handleMovieClicked(event.name)"></app-movie-card>
   </div>
 </div>

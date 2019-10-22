@@ -1,8 +1,7 @@
 
 <div class="movie-card">
 
-  <div class="cont">
-
+  <div class="container">
     <div class="hero" [style.background-image]="'url(' + movie.Poster + ')'" >
 
       <div class="details">
@@ -16,9 +15,9 @@
 
     </div> <!-- end hero -->
 
-    <div class="description">
+    <div class="description row">
 
-      <div class="column1">
+      <div class="column1 col-md-4">
           <p>Genre</p>
           <p><span class="tag">{{movie.Genre}}</span></p>
           <p>Released</p>
@@ -28,7 +27,7 @@
         <div class="likes" (click)="addToFavorite()">add to favorite</div>
       </div> <!-- end column1 -->
 
-      <div class="column2">
+      <div class="column2 col-md-6">
         <p>{{movie.Plot}}</p>
         <p>Language: {{movie.Language}}</p>
         <p>Country: {{movie.Country}}</p>

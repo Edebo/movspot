@@ -18,13 +18,14 @@ a:hover {
   color: #A9A8A3;
   padding: 40px 0;
 }
-.cont {
+.container {
   margin: 0 auto;
-  width: 780px;
-  height: 100vh;
+  /* width: 780px; */
+  /* height: 100vh; */
   background: #F0F0ED;
   border-radius: 5px;
   position: relative;
+  padding:0;
 }
 .hero {
   height: 342px;
@@ -46,8 +47,7 @@ a:hover {
   overflow: hidden;
   top: 0;
   left: 0;
-  /* background: red;
-  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/hobbit_bg.jpg"); */
+
   z-index: -1;
   transform: skewY(-2.2deg);
   transform-origin: 0 0;
@@ -77,7 +77,7 @@ a:hover {
   border-radius: 5px;
   color: #544C21;
   font-size: 14px;
-  padding: 0px 4px;
+  /* padding: 0px 4px; */
 }
 .details .title2 {
   color: white;
@@ -96,6 +96,8 @@ a:hover {
   border: 1px solid #C4AF3D;
   border-radius:5px;
   cursor:pointer;
+  max-width: 150px;
+  margin: 0 auto;
 
 }
 
@@ -105,16 +107,18 @@ a:hover {
 
 .description {
   bottom: 0px;
-  height: 200px;
+  /* height: 200px; */
   font-size: 16px;
   line-height: 20px;
   color: #B1B0AC;
+  padding-top:1em;
+  padding-bottom:1em;
 }
 .column1 {
   padding-left: 1em;
   padding-top: 30px;
-  width: 220px;
-  float: left;
+  /* width: 220px; */
+  /* float: left; */
   text-align: center;
 }
 .tag {
@@ -133,61 +137,10 @@ a:hover {
   padding-left: 20px;
   padding-top: 15px;
   margin-left: 10px;
-  width: 480px;
-  float: left;
+  /* width: 480px; */
+  /* float: left; */
 }
-.avatars {
-  margin-top: 23px;
-}
-.avatars img {
-  cursor: pointer;
-}
-.avatars img:hover {
-  opacity: 0.6;
-}
-.avatars a:hover {
-  text-decoration: none;
-}
-fieldset, label {
-  margin: 0;
-  padding: 0;
-}
-/****** Style Star Rating Widget *****/
-.rating {
-  border: none;
-  float: left;
-}
-.rating > input {
-  display: none;
-}
-.rating > label:before {
-  margin: 5px;
-  margin-top: 0;
-  font-size: 1em;
-  font-family: FontAwesome;
-  display: inline-block;
-  content: "\f005";
-}
-.rating > .half:before {
-  content: "\f089";
-  position: absolute;
-}
-.rating > label {
-  color: #ddd;
-  float: right;
-}
-/***** CSS Magic to Highlight Stars on Hover *****/
-.rating > input:checked ~ label, .rating:not(:checked) > label:hover, .rating:not(:checked) > label:hover ~ label {
-  /* show gold star when clicked */
-  /* hover current star */
-  color: #FFD700;
-}
-/* hover previous stars in list */
-.rating > input:checked + label:hover, .rating > input:checked ~ label:hover, .rating > label:hover ~ input:checked ~ label, .rating > input:checked ~ label:hover ~ label {
-  /* hover current star when changing rating */
-  /* lighten current selection */
-  color: #FFED85;
-}
+
 a[data-tooltip] {
   position: relative;
 }
