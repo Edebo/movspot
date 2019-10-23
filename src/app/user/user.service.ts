@@ -22,7 +22,7 @@ export class UserService {
    }
 
    signIn(data){
-    return this.http.post('https://movspot.herokuapp.com//api/auth/signin',JSON.stringify(data),this.httpOptions)
+    return this.http.post('https://movspot.herokuapp.com/api/auth/signin',JSON.stringify(data),this.httpOptions)
    }
 
    saveUserData(userData){
